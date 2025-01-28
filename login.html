@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" href="login.css">
+        <title>login</title>
+        <script type = "text/javascript">
+            function validate() {
+            
+            if( document.myForm.abc.value !="abc" ) {
+            alert( "Please enter valid Username!" );
+            document.myForm.abc.focus() ;
+            return false;
+            }
+            if( document.myForm.a123.value !="a123" ) {
+            alert( "Please enter valid Password!" );
+            document.myForm.a123.focus() ;
+            return false;
+            }
+           return( true );
+           }
+            </script>
+</head>
+<body>
+    <div class="login">
+		<h1>LOG IN</h1>
+<form action="index.html"  name="myForm" onsubmit="return(validate());">
+	<label>User Name :</label>
+	<input type="text" name="abc" id="abc" placeholder="UserName">
+	<br>
+
+
+	<label>Password :</label>
+	<input type="password" name="a123" id="a123" placeholder="Password">
+	<br><br>
+	<input type="reset" value="Reset">
+	<input type="submit" value="Log In" >
+
+</form>
+
+</div>
+
+
+</body>
+</html>
